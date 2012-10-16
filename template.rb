@@ -22,6 +22,8 @@ body {
 }
 RUBY
 
+# remove_file 'app/views/layouts/application.html.erb'
+# get
 
 gsub_file 'Gemfile', /#.*\n/, "\n"
 gsub_file 'Gemfile', /\n^\s*\n/, "\n"
