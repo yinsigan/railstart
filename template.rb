@@ -22,8 +22,10 @@ body {
 }
 RUBY
 
-# remove_file 'app/views/layouts/application.html.erb'
-# get
+remove_file 'app/views/layouts/application.html.erb'
+get "https://raw.github.com/yinsigan/railstart/master/layouts/application.html.erb", "app/views/layouts/application.html.erb"
+get "https://raw.github.com/yinsigan/railstart/master/layouts/_messages.html.erb", "app/views/layouts/_messages.html.erb"
+get "https://raw.github.com/yinsigan/railstart/master/layouts/_navigation.html.erb", "app/views/layouts/_navigation.html.erb"
 
 gsub_file 'Gemfile', /#.*\n/, "\n"
 gsub_file 'Gemfile', /\n^\s*\n/, "\n"
