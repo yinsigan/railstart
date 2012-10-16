@@ -33,3 +33,9 @@ gsub_file 'Gemfile', /\n^\s*\n/, "\n"
 # remove commented lines and multiple blank lines from config/routes.rb
 gsub_file 'config/routes.rb', /  #.*\n/, "\n"
 gsub_file 'config/routes.rb', /\n^\s*\n/, "\n"
+
+run 'bundle install'
+
+git :init
+git :add => '.'
+git :commit => "-aqm 'init commit'"
